@@ -3,7 +3,7 @@ package asn1fp
 import (
 	"encoding/asn1"
 	"errors"
-	"github.com/prometheus/common/log"
+	log "gopkg.in/clog"
 	"go.uber.org/zap"
 	"sort"
 	"strconv"
