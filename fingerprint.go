@@ -3,7 +3,7 @@ package asn1fp
 import (
 	"encoding/asn1"
 	"errors"
-	log "go-clog/clog"
+	"log"
 	"go.uber.org/zap"
 	"sort"
 	"strconv"
@@ -550,7 +550,7 @@ func fpRecurse(depth int, bytes []byte, c *Config) ([]string, error) {
 			if c.ParseOID {
 				if len(oid) > 15 {
 					//	TODO: fix issue where GeneralName types [0-8] map to asn1 types in extensions
-					log.Debug("Skipping super long OID, likely a IA5 General Name")
+					log.PrintLn("Skipping super long OID, likely a IA5 General Name")
 					fps = append(fps, fpForDepth(depth, obj.Tag))
 					return fps, nil
 				}
