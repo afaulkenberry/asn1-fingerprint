@@ -3,8 +3,8 @@ package asn1fp
 import (
 	"encoding/asn1"
 	"errors"
-	"log"
-	"go.uber.org/zap"
+	log "gopkg.in/clog.v1"
+    "go.uber.org/zap"
 	"sort"
 	"strconv"
 	"strings"
