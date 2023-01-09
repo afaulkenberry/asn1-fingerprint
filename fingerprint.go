@@ -3,7 +3,7 @@ package asn1fp
 import (
 	"encoding/asn1"
 	"errors"
-	log "gopkg.in/clog.v1"
+	log "go-clog/clog"
 	"go.uber.org/zap"
 	"sort"
 	"strconv"
